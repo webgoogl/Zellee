@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mt-5 border border-1 p-2" style="height: 450px;">
+    <h3 class="text-center mt-3">Contact Us</h3>
+
+    <form action="" method="post" class=" d-flex justify-content-center" >
+        {% csrf_token %}
+        <div>
+            <input type="text" class="w-100 px-4 mt-3" placeholder="name" required="" name="name">
+            <input type="text" class="w-100 px-4 mt-3" placeholder="contact number" required="" name="phone">
+            <input type="email" class="w-100 px-4 mt-3" placeholder="email" required="" name="email">
+            <input type="text" class="w-100 px-4 mt-3 h-50" placeholder="message" required="" name="msg">
+            <button type="submit" class="btn  fs-5 float-end mt-3" style="background-color:#6d1ed4; color: white;">send query</button>
+        </div>
+        
+    </form>
+    
+</div>
+{% endblock content %}
